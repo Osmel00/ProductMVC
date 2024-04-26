@@ -1,0 +1,33 @@
+﻿@model List< ProductBook.Models.Models.Product>
+<partial name="_Notification"/>
+<div class="container">
+       <div class="row pt-4 pb-3">
+           <div class="col-6">
+               <h2 class="text-primary">Product List</h2>
+           </div>
+           <div class="col-6 text-end">
+               <a asp-controller="Product" asp-action="Upsert" class="btn btn-primary" >
+                <i class="bi bi-plus-circle"></i>  Create New Product
+               </a>
+           </div> 
+       </div>
+       <table id="tblData" class="table table-bordered table-striped" style="width:100%;">
+            <thead>
+                <tr>
+                <th>Title</th>
+                <th>ISBN</th>
+                <th>Price</th>
+                <th>Author</th>
+                <th>Category</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    @section Scripts {
+        <script src="~/js/product.js"></script>
+
+    @* <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.0.5/js/dataTables.bootstrap5.js"></script> *@
+    }
